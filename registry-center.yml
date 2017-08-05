@@ -8,7 +8,7 @@ eureka:
     leaseExpirationDurationInSeconds: 2
     statusPageUrlPath: ${management.contextPath}/info
     healthCheckUrlPath: ${management.contextPath}/health
-    hostname: 172.17.0.2
+    hostname: localhost
     instanceId: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
   client:
    registerWithEureka: false
