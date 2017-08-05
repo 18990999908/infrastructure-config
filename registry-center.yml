@@ -8,7 +8,7 @@ eureka:
     leaseExpirationDurationInSeconds: 2
     statusPageUrlPath: ${management.contextPath}/info
     healthCheckUrlPath: ${management.contextPath}/health
-    hostname: localhost
+    hostname: 172.17.0.2
     instanceId: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
   client:
    registerWithEureka: false
@@ -22,6 +22,7 @@ eureka:
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enableSelfPreservation: false
+    renewalPercentThreshold: 0.49
 
 logging:
   config: classpath:logback.xml
